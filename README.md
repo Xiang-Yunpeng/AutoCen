@@ -20,6 +20,7 @@ can inspect centromere architecture in a single multi‑omics view.
 
 - [Overview](#overview)
 - [Pipeline](#pipeline)
+- [Example output](#example-output)
 - [Installation](#installation)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
@@ -84,6 +85,20 @@ flowchart TD
         J[Multi-track PDF report]
     end
 ```
+
+---
+
+## Example output
+
+![AutoCen multi-track figure over a centromeric window](docs/img/example_multitrack.png)
+
+*A single `plot` command over a 2‑Mb window (`chr1:7–9 Mb`) of a chromosome‑level fish genome
+assembly. Top to bottom: density of an AutoCen‑identified satellite monomer family (**CEN434**);
+four transposable‑element classes grouped with `--te_mapping` (**LTR**, **DNA**, **LINE**,
+**SINE**); **gene** density from a GFF3; and a **Hi‑C** contact heatmap. The satellite family
+forms a ~1.1‑Mb plateau (≈7.45–8.55 Mb) that coincides with a sharp gene desert and a Hi‑C
+contact boundary, while the TE classes are enriched in the flanking arms — the classic
+architecture of a centromere, assembled into one view.*
 
 ---
 
