@@ -3,6 +3,7 @@
 **Automated centromere satellite identification and multi‑omics visualization for chromosome‑level genome assemblies.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21475672.svg)](https://doi.org/10.5281/zenodo.21475672)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](#)
 [![Python](https://img.shields.io/badge/python-3.13-blue.svg)](#)
 
@@ -357,8 +358,14 @@ python AutoCen.py plot \
 
 ## Citation
 
-If you use AutoCen in your research, please cite this repository. A Zenodo DOI and a formal
-citation will be added here upon release.
+If you use AutoCen in your research, please cite it via its archived Zenodo record:
+
+> Peng, X. (2026). *AutoCen: Automated centromere satellite identification and multi‑omics
+> visualization* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.21475672
+
+The DOI [`10.5281/zenodo.21475672`](https://doi.org/10.5281/zenodo.21475672) always resolves to
+the latest version; to cite v1.0.0 specifically use
+[`10.5281/zenodo.21475673`](https://doi.org/10.5281/zenodo.21475673).
 
 ## License
 
