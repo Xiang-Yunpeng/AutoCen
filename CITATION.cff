@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "AutoCen: Automated centromere satellite identification and multi-omics visualization"
+abstract: >-
+  AutoCen identifies centromeric satellite monomers from chromosome-level genome
+  assemblies (TRASH-based tandem-repeat detection, monomer clustering, and genome-wide
+  density mapping) and renders publication-ready figures overlaying satellite,
+  transposable-element, gene, and Hi-C tracks.
+type: software
+authors:
+  - family-names: Xiang
+    given-names: Yunpeng
+    orcid: "https://orcid.org/0009-0004-3877-7517"
+    affiliation: "School of Life Science, Southwest University, Chongqing, China"
+version: 1.0.0
+date-released: "2026-07-21"
+license: MIT
+url: "https://github.com/Xiang-Yunpeng/AutoCen"
+repository-code: "https://github.com/Xiang-Yunpeng/AutoCen"
+doi: 10.5281/zenodo.21475672
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21475672
+    description: Concept DOI (resolves to all versions)
+  - type: doi
+    value: 10.5281/zenodo.21475673
+    description: DOI for version 1.0.0
+keywords:
+  - bioinformatics
+  - genomics
+  - centromere
+  - satellite DNA
+  - tandem repeats
+  - transposable elements
+  - Hi-C
+  - visualization

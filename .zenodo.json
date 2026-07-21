@@ -1,0 +1,24 @@
+{
+  "title": "AutoCen: Automated centromere satellite identification and multi-omics visualization",
+  "description": "AutoCen identifies centromeric satellite monomers from chromosome-level genome assemblies (TRASH-based tandem-repeat detection, monomer clustering, and genome-wide density mapping) and renders publication-ready figures overlaying satellite, transposable-element, gene, and Hi-C tracks.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Xiang, Yunpeng",
+      "orcid": "0009-0004-3877-7517",
+      "affiliation": "School of Life Science, Southwest University, Chongqing, China"
+    }
+  ],
+  "keywords": [
+    "bioinformatics",
+    "genomics",
+    "centromere",
+    "satellite DNA",
+    "tandem repeats",
+    "transposable elements",
+    "Hi-C",
+    "visualization"
+  ]
+}
