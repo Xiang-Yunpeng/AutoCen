@@ -1,0 +1,52 @@
+name: autocen
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # 基础语言环境
+  - python=3.13
+  - r-base=4.4.3
+  
+  # 生信工具 
+  - bedtools=2.31.1
+  - blast=2.17.0
+  - cd-hit=4.8.1
+  - entrez-direct=24.0
+  - hmmer=3.4
+  - htslib=1.22.1
+  - mafft=7.525
+  - samtools=1.22.1
+  - ncbi-vdb
+  
+  # R 数据处理与绘图包 
+  - r-tidyverse
+  - r-data.table
+  - r-ggplot2
+  - r-reshape2
+  
+  # Python 核心包 
+  - numpy=2.4.2
+  - pandas=3.0.1
+  - beautifulsoup4
+  - requests
+  - pyyaml
+  
+  # Pip 安装部分
+  - pip
+  - pip:
+      - hic-straw
+      - matplotlib==3.10.8
+      - pillow==12.1.1
+  
+  # R 数据处理与绘图及第三方工具依赖
+  - r-tidyverse
+  - r-data.table
+  - r-ggplot2
+  - r-reshape2
+  - r-seqinr
+  - r-doparallel
+  - r-mass
+  - r-codetools
+  - r-foreach
+  - r-iterators

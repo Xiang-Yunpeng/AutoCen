@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Backups / editor / OS cruft
+*.bak
+*.bak_*
+*~
+*.swp
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# AutoCen run outputs / working directories
+1_TRASH/
+2_candidate_arrays/
+3_monomer_clustering/
+4_sliding_windows/
+5_visualization/
+autocen.log
+nohup.out
+*.blast
+*_density.tsv
+*_hits.bed
+genome.sizes
+windows_*.bed
+genome_blastdb.*
+
+# Large inputs / test data (not distributed)
+test/
+*.fasta.fai

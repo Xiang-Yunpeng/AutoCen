@@ -1,0 +1,31 @@
+AutoCen
+Copyright (c) 2026 Xiangyun Peng
+Licensed under the MIT License (see LICENSE).
+
+================================================================================
+Bundled third-party components
+================================================================================
+
+The `packages/` directory contains unmodified source tarballs of Bioconductor R
+packages, redistributed here solely to enable offline installation of AutoCen's
+tandem-repeat dependency TRASH (https://github.com/vlothec/TRASH_2) on hosts with
+limited internet access. These packages are NOT part of AutoCen and retain their
+own copyright and license. Each is distributed under the Artistic License 2.0
+(https://opensource.org/license/artistic-2-0); zlibbioc additionally bundles zlib
+under the zlib license.
+
+  Package             Version    License        Source
+  ------------------  ---------  -------------  --------------------------------
+  BiocGenerics        0.52.0     Artistic-2.0   Bioconductor
+  Biostrings          2.74.1     Artistic-2.0   Bioconductor
+  GenomeInfoDb        1.42.3     Artistic-2.0   Bioconductor
+  GenomeInfoDbData    1.2.15     Artistic-2.0   Bioconductor
+  IRanges             2.40.1     Artistic-2.0   Bioconductor
+  S4Vectors           0.44.0     Artistic-2.0   Bioconductor
+  UCSC.utils          1.2.0      Artistic-2.0   Bioconductor
+  XVector             0.46.0     Artistic-2.0   Bioconductor
+  zlibbioc            1.52.0     Artistic-2.0   Bioconductor
+
+These tarballs are the official releases obtained from Bioconductor
+(https://bioconductor.org) and have not been altered. To obtain them from the
+original source instead, use BiocManager::install() within R.
