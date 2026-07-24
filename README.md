@@ -375,7 +375,7 @@ python AutoCen.py plot \
 
 If you use AutoCen in your research, please cite it via its archived Zenodo record:
 
-> Peng, X. (2026). *AutoCen: Automated centromere satellite identification and multi‑omics
+> Xiang, Y. (2026). *AutoCen: Automated centromere satellite identification and multi‑omics
 > visualization* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.21475672
 
 The DOI [`10.5281/zenodo.21475672`](https://doi.org/10.5281/zenodo.21475672) always resolves to
