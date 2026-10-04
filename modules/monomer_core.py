@@ -115,6 +115,7 @@ def extract_and_cluster(trash_repeats_csv, candidate_bed, out_dir, cdhit_id, cdh
     try:
         with open(target_fasta, 'w') as f_out:
             for chunk in pd.read_csv(trash_repeats_csv, chunksize=chunk_size, low_memory=False):
+                chunk[['start', 'end']] = chunk[['start', 'end']].astype('int64')
                 for monomer in chunk.itertuples(index=False):
                     if monomer.seqID in candidate_regions:
                         for array_start, array_end in candidate_regions[monomer.seqID]:
@@ -218,6 +219,7 @@ def extract_and_cluster_per_chrom(trash_repeats_csv, candidate_bed, out_dir, cdh
         chrom_file_handles = {c: open(chrom_fasta_paths[c], 'w') for c in chromosomes}
         
         for chunk in pd.read_csv(trash_repeats_csv, chunksize=100000, low_memory=False):
+            chunk[['start', 'end']] = chunk[['start', 'end']].astype('int64')
             for monomer in chunk.itertuples(index=False):
                 if monomer.seqID in candidate_regions:
                     for array_start, array_end in candidate_regions[monomer.seqID]:

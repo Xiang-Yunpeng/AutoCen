@@ -32,17 +32,27 @@ def check_dependencies(genome_fa, trash_script, trash_dir, logger):
     logger.info("All dependencies checked successfully.")
 
 def find_trash_files(search_dir, logger):
-    arrays_csv = glob.glob(os.path.join(search_dir, "**", "*arrays.csv"), recursive=True)
+    # TRASH's final array table is <fasta>_arrays.csv; classarrays / aregarrays / regarrays /
+    # no_repeats_arrays are temp files (TRASH README), so pick the final table by name, not by size
+    arrays_csv = [f for f in glob.glob(os.path.join(search_dir, "**", "*_arrays.csv"), recursive=True)
+                  if not f.endswith("_no_repeats_arrays.csv")]
     repeats_csv = glob.glob(os.path.join(search_dir, "**", "*repeats_with_seq.csv"), recursive=True)
-    
-    if not arrays_csv or not repeats_csv:
-        logger.error("Could not find required TRASH output CSV files (arrays.csv and repeats_with_seq.csv).")
+
+    if len(arrays_csv) != 1 or len(repeats_csv) != 1:
+        logger.error(f"Expected exactly one TRASH *_arrays.csv and one *repeats_with_seq.csv in {search_dir}, "
+                     f"found {len(arrays_csv)} and {len(repeats_csv)}: {arrays_csv + repeats_csv}")
         sys.exit(1)
-        
-    logger.info(f"Found arrays.csv: {max(arrays_csv, key=os.path.getsize)}")
-    logger.info(f"Found repeats_with_seq.csv: {max(repeats_csv, key=os.path.getsize)}")
-    
-    return max(arrays_csv, key=os.path.getsize), max(repeats_csv, key=os.path.getsize)
+
+    # The final table has repeats_number; an intermediate _arrays.csv left by an unfinished TRASH run does not
+    with open(arrays_csv[0]) as f:
+        if "repeats_number" not in f.readline():
+            logger.error(f"{arrays_csv[0]} has no repeats_number column; TRASH did not finish")
+            sys.exit(1)
+
+    logger.info(f"Found arrays.csv: {arrays_csv[0]}")
+    logger.info(f"Found repeats_with_seq.csv: {repeats_csv[0]}")
+
+    return arrays_csv[0], repeats_csv[0]
 
 def run_trash(genome_fa, output_dir, trash_script, threads, logger):
     logger.info("--- Step 1: TRASH Analysis Phase ---")

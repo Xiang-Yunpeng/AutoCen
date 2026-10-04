@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21475672.svg)](https://doi.org/10.5281/zenodo.21475672)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](#)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](#)
 [![Python](https://img.shields.io/badge/python-3.13-blue.svg)](#)
 
 AutoCen takes a genome assembly and automatically (1) finds tandem‑repeat arrays with
@@ -131,7 +131,8 @@ git clone https://github.com/vlothec/TRASH_2
 ```
 
 > If you already have TRASH output for your genome, you can skip running TRASH and point AutoCen
-> at the existing results with `--trash_dir` instead of `--trash_path`.
+> at the existing results with `--trash_dir` instead of `--trash_path`. The directory must hold
+> exactly one **finished** TRASH run (one `<genome>_arrays.csv` and one `*repeats_with_seq.csv`).
 
 ### 4. Install the bundled R packages (offline, for TRASH under R 4.4)
 
@@ -165,7 +166,7 @@ install.packages("packages/Biostrings_2.74.1.tar.gz",       repos = NULL, type =
 ### 5. Verify
 
 ```bash
-python AutoCen.py --version      # AutoCen v1.0.0
+python AutoCen.py --version      # AutoCen v1.0.1
 python AutoCen.py --help
 ```
 
@@ -231,7 +232,7 @@ Add `--refined` to cluster per chromosome and run the cross‑chromosome compari
 | `--genome` | *required* | Input genome FASTA |
 | `--work_dir` | *required* | Output directory (created if missing) |
 | `--trash_path` | – | Path to `TRASH.R` (**full‑automation mode**: AutoCen runs TRASH for you) |
-| `--trash_dir` | – | Path to an **existing** TRASH output directory (skip running TRASH) |
+| `--trash_dir` | – | Path to an **existing** TRASH output directory (skip running TRASH); must contain exactly one finished TRASH run |
 | `--threads` | `20` | CPU threads |
 | `--chrom_num` | all | Only analyze the first *N* sequences of the FASTA (chromosomes are typically listed before unplaced contigs/scaffolds) |
 | `--refined` | off | Enable refined (per‑chromosome + cross‑chromosome) mode |
@@ -376,11 +377,12 @@ python AutoCen.py plot \
 If you use AutoCen in your research, please cite it via its archived Zenodo record:
 
 > Xiang, Y. (2026). *AutoCen: Automated centromere satellite identification and multi‑omics
-> visualization* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.21475672
+> visualization* (v1.0.1). Zenodo. https://doi.org/10.5281/zenodo.21475672
 
 The DOI [`10.5281/zenodo.21475672`](https://doi.org/10.5281/zenodo.21475672) always resolves to
-the latest version; to cite v1.0.0 specifically use
-[`10.5281/zenodo.21475673`](https://doi.org/10.5281/zenodo.21475673).
+the latest version; each release also has its own version DOI on the Zenodo record
+(v1.0.0: [`10.5281/zenodo.21475673`](https://doi.org/10.5281/zenodo.21475673)).
+See [`CHANGELOG.md`](CHANGELOG.md) for changes between versions.
 
 ## License
 

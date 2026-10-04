@@ -12,7 +12,7 @@ from modules.visualization import plot_multi_tracks, plot_refined_report
 from modules.cross_chrom_analysis import cross_chromosome_analysis
 from modules.te_scanner import run_scan_te
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 def main():
     parser = argparse.ArgumentParser(description="AutoCen: Automated Centromere Identification and Multi-omics Visualization Toolkit")

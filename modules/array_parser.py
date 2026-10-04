@@ -8,6 +8,10 @@ def extract_top_arrays(arrays_csv, output_bed, top_n, min_length, logger, target
     
     try:
         df = pd.read_csv(arrays_csv)
+        # TRASH writes CSVs with R write.csv, which prints round coordinates in scientific
+        # notation (e.g. 2.8e+07); pandas then reads the column as float and the BED gets '.0'
+        df['start'] = df['start'].astype('int64')
+        df['end'] = df['end'].astype('int64')
         df['array_length'] = df['end'] - df['start']
         logger.info(f"Total arrays found: {len(df)}")
         

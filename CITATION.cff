@@ -12,8 +12,8 @@ authors:
     given-names: Yunpeng
     orcid: "https://orcid.org/0009-0004-3877-7517"
     affiliation: "School of Life Science, Southwest University, Chongqing, China"
-version: 1.0.0
-date-released: "2026-07-21"
+version: 1.0.1
+date-released: "2026-10-04"
 license: MIT
 url: "https://github.com/Xiang-Yunpeng/AutoCen"
 repository-code: "https://github.com/Xiang-Yunpeng/AutoCen"
